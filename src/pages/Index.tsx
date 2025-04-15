@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, User, BookOpen, Send, Github, Linkedin, Instagram, Rocket, Brain, Coffee, LightbulbIcon, Wand2 } from 'lucide-react';
+import { Code, User, BookOpen, Send, Github, Linkedin, Mail, Rocket, Brain, Coffee, LightbulbIcon, Wand2 } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -32,17 +31,17 @@ const Index = () => {
           
           {/* Social Links with Hover Effects */}
           <div className="flex justify-center space-x-4 mt-6">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/kanamakindhabharathreddy" target="_blank" rel="noopener noreferrer"
                className="transform transition-all duration-200 hover:scale-125">
               <Github className="text-muted-foreground hover:text-purple-500" size={24} />
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer"
+            <a href="www.linkedin.com/in/bharath-reddy-kanamakindha" target="_blank" rel="noopener noreferrer"
                className="transform transition-all duration-200 hover:scale-125">
               <Linkedin className="text-muted-foreground hover:text-blue-500" size={24} />
             </a>
-            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer"
+            <a href="mailto:kanamakindhabharathreddy@gmail.com"
                className="transform transition-all duration-200 hover:scale-125">
-              <Instagram className="text-muted-foreground hover:text-pink-500" size={24} />
+              <Mail className="text-muted-foreground hover:text-red-500" size={24} />
             </a>
           </div>
         </section>
