@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, User, BookOpen, Send } from 'lucide-react';
+import { Code, User, BookOpen, Send, Github, Linkedin, Instagram } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -10,13 +10,26 @@ const Index = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-4">Python Programmer</h1>
+          <h1 className="text-5xl font-bold mb-4">Kanamakindha Bharath Reddy</h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Passionate about learning and exploring the world of programming
+            Python Programmer | Aspiring Web Developer
           </p>
           <div className="flex justify-center space-x-4">
             <Button variant="default">Download CV</Button>
             <Button variant="outline">Contact Me</Button>
+          </div>
+          
+          {/* Social Links */}
+          <div className="flex justify-center space-x-4 mt-6">
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <Github className="text-muted-foreground hover:text-primary" size={24} />
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="text-muted-foreground hover:text-primary" size={24} />
+            </a>
+            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <Instagram className="text-muted-foreground hover:text-primary" size={24} />
+            </a>
           </div>
         </section>
 
