@@ -35,7 +35,7 @@ const Index = () => {
                className="transform transition-all duration-200 hover:scale-125">
               <Github className="text-muted-foreground hover:text-purple-500" size={24} />
             </a>
-            <a href="www.linkedin.com/in/bharath-reddy-kanamakindha" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/bharath-reddy-kanamakindha" target="_blank" rel="noopener noreferrer"
                className="transform transition-all duration-200 hover:scale-125">
               <Linkedin className="text-muted-foreground hover:text-blue-500" size={24} />
             </a>
