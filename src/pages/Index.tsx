@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, User, BookOpen, Send, Github, Linkedin, Mail, Rocket, Brain, Coffee, LightbulbIcon, Wand2, MoonIcon, SunIcon } from 'lucide-react';
+import { Code, User, BookOpen, Send, Github, Linkedin, Mail, Rocket, Brain, Coffee, LightbulbIcon, Wand2, MoonIcon, SunIcon, FileText } from 'lucide-react';
 import { useTheme } from '@/hooks/useTheme';
 import { toast } from "@/components/ui/sonner";
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const { theme, toggleTheme } = useTheme();
@@ -46,6 +47,18 @@ const Index = () => {
           )}
         </Button>
 
+        {/* Resume Floating Button */}
+        <Link to="/resume">
+          <Button 
+            variant="outline" 
+            size="icon" 
+            className="absolute top-4 right-16 transition-all duration-300 hover:scale-110"
+            title="View Resume"
+          >
+            <FileText className="h-5 w-5 text-primary" />
+          </Button>
+        </Link>
+
         {/* Rain of Icons Animation */}
         {isRaining && (
           <div className="fixed inset-0 pointer-events-none z-50">
@@ -85,9 +98,12 @@ const Index = () => {
             <Coffee className="text-orange-500 animate-bounce" size={24} />
           </p>
           <div className="flex justify-center space-x-4">
-            <Button variant="default" className="hover:scale-105 transition-all duration-200 hover:bg-purple-600">
-              Download CV
-            </Button>
+            <Link to="/resume">
+              <Button variant="default" className="flex items-center gap-2 hover:scale-105 transition-all duration-200 hover:bg-purple-600">
+                <FileText size={18} />
+                View Resume
+              </Button>
+            </Link>
             <Button 
               variant="outline" 
               className="hover:scale-105 transition-all duration-200"
@@ -202,12 +218,23 @@ const Index = () => {
               <p className="text-muted-foreground mb-4">
                 Interested in collaborating or learning more?
               </p>
-              <Button 
-                className="hover:scale-105 transition-all duration-200 hover:bg-purple-600"
-                onClick={handleContactClick}
-              >
-                Get in Touch
-              </Button>
+              <div className="flex space-x-4">
+                <Button 
+                  className="hover:scale-105 transition-all duration-200 hover:bg-purple-600"
+                  onClick={handleContactClick}
+                >
+                  Get in Touch
+                </Button>
+                <Link to="/resume">
+                  <Button 
+                    variant="outline"
+                    className="hover:scale-105 transition-all duration-200 flex items-center gap-2"
+                  >
+                    <FileText size={18} />
+                    View Resume
+                  </Button>
+                </Link>
+              </div>
             </CardContent>
           </Card>
         </section>
